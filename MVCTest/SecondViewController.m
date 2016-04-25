@@ -1,24 +1,24 @@
 //
-//  ViewController.m
+//  SecondViewController.m
 //  MVCTest
 //
-//  Created by Gopal.Vaid on 21/04/16.
+//  Created by Gopal.Vaid on 25/04/16.
 //  Copyright © 2016 Gopal.Vaid. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SecondViewController.h"
 #import "ViewClass.h"
 #import "ModelView.h"
 
-@interface ViewController ()
+@interface SecondViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
     
     // View Initialization
     ViewClass *viewClass = [[ViewClass alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 65)];
@@ -28,18 +28,17 @@
     
     // Model initialization
     ModelView *modelView = [[ModelView alloc]init];
-    modelView.strTitle = @"FirstView";
+    modelView.strTitle = @"SecondView";
     viewClass.lblTitle.text = modelView.strTitle;
     viewClass.lblTitle.textAlignment = NSTextAlignmentCenter;
     viewClass.lblTitle.textColor = [UIColor blackColor];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
